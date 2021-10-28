@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+//6. Identifique as quantas e quais são as props do componente abaixo. Logo após, crie um componente Post passando todas as props identificadas.
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//10 props: Avatar, nome, tempo da publicação, menu_post, parágrafo do post, foto do post, botão de like, botão comentários, botão de share, texto curtidas.
+import React from 'react'
+import PostHeader from './components/Post/PostHeader'
+import PostContent from './components/Post/PostContent'
+import Reactions from './components/Post/Reactions'
+
+class Post extends React.Component {
+    render() {
+        return (
+            <>
+            <PostHeader />
+
+            <PostContent />
+
+            <Reactions />
+            </>
+        )
+    }
 }
 
-export default App;
+export default Post;
